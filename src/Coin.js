@@ -11,7 +11,7 @@ export default function Coin({name,image,symbol,price,priceChange}) {
                   <p className='coin-symbol'>{symbol}</p>
               </div>
               <div className='coin-data'>
-                  <p className='coin-price'> Rs. {price}</p>
+                  <p className='coin-price'> Rs. {price.toLocaleString()}</p>
                   {priceChange < 0 ? (
                       <p className='coin-present red' >{priceChange.toFixed(2)} %</p>
                   ) : (<p className='coin-present green' >{priceChange.toFixed(2)} %</p>
